@@ -19,7 +19,7 @@ app.get('/api/products', async (req, res) => {
 });
 
 // Start server
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
@@ -85,5 +85,4 @@ Product.insertMany(productsToAdd)
   .catch((err) => {
     console.error('Error adding products:', err);
   });
-module.exports = productsToAdd;
-module.exports = app; 
+  module.exports = { productsToAdd, app };
